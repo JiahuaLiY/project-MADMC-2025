@@ -1,1 +1,2 @@
-from dpApproach import dpApproach
+from mokp.dpApproach import dpApproach
+from mokp.miplApproach import miplApproach
