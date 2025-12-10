@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-def readKPData(filename: str) -> tuple[pd.DataFrame, int]:
+def loadKPData(filename: str) -> tuple[pd.DataFrame, int]:
     """Read the knapsack problem data."""
     pattern = "c[ \t]+w[ \t]+(v[0-9]+[ \t]+)+(v[0-9]+)*"
     colformat = None
@@ -29,5 +29,5 @@ def readKPData(filename: str) -> tuple[pd.DataFrame, int]:
     return pd.DataFrame(data, columns=colformat), capacity
 
 if __name__ == "__main__":
-    print(readKPData("../data/2KP200-TA-0.dat"))
+    print(loadKPData("../data/2KP200-TA-0.dat"))
     

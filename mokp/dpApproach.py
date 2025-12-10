@@ -58,14 +58,14 @@ def modp(values: np.ndarray, weights: np.ndarray, capacity: int, dominate: Calla
     return prevDP[-1]
 
 
-def modpLorenz(values: np.ndarray, weights: np.ndarray, capacity: int) -> set[tuple]:
+def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int) -> set[tuple]:
     paretoNDPoints = modp(values, weights, capacity, dominate=paretoDominate)
     return ND(paretoNDPoints, dominate=lorenzDominate)
 
 if __name__ == "__main__":
-    from utils import readKPData
+    from dataIO import loadKPData
 
-    df, capacity = readKPData("../data/2KP200-TA-0.dat")
+    df, capacity = loadKPData("../data/2KP200-TA-0.dat")
 
     m, n = 20, 2 # 20 objects and 2 objectives.
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     print(list(map(lorenzVector, paretoNDPoints)))
     print(ND(paretoNDPoints, dominate=lorenzDominate))
 
-    print(modpLorenz(values, weights, capacity))
+    print(dpApproach(values, weights, capacity))
 
 
 
