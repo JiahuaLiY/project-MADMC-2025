@@ -84,7 +84,8 @@ def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeig
         if findAllLorenzND:
             similarNDPoints = findSimilar(y, lorenzVec, values, weights, capacity, owaWeights)
             lorenzNDPoints |= similarNDPoints
-            print(f"    similar points = {similarNDPoints}")
+            if verbose:
+                print(f"    similar points = {similarNDPoints}")
         else:
             lorenzNDPoints.add(y)
         it += 1
@@ -100,7 +101,7 @@ def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeig
     endTime = time()
     
     return {
-        "pareto": set(),
+        "pareto": set(lorenzNDPoints),
         "lorenz": lorenzNDPoints,
         "number-of-objectives": n,
         "number-of-items": m,
