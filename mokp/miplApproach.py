@@ -1,7 +1,7 @@
 import numpy as np
 import gurobipy as gp
 
-# from time import time
+from time import time
 
 def initOWAModel(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray) -> tuple[gp.Model, tuple[gp.tupledict[int, gp.Var]]]:
     """"""
@@ -28,7 +28,7 @@ def initOWAModel(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeig
     return model, (xs, fs, rs, bs)
 
 def findSimilar(y: tuple, lorenzVec: tuple, values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray) -> set[tuple]:
-    """Find all non dominated points with same lorenz vector as y."""
+    """Find all non-dominated points with same lorenz vector as y."""
     similarNDPoints = {y}
     _, n = values.shape
 
@@ -55,10 +55,18 @@ def findSimilar(y: tuple, lorenzVec: tuple, values: np.ndarray, weights: np.ndar
     
     return similarNDPoints
 
-def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray, findAllLorenzND: bool=False) -> dict[str, set[tuple]]:
+def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray, findAllLorenzND: bool=False, verbose: bool=False) -> dict[str, set[tuple]]:
     """"""
     lorenzNDPoints = set()
-    _, n = values.shape
+    m, n = values.shape
+    it = 1
+
+    if verbose:
+        print()
+        print(f"Start the resolution with OWA weight = {owaWeights}")
+        print(f"---------------------------------------------------")
+    
+    startTime = time()
 
     model, (_, fs, rs, bs) = initOWAModel(values, weights, capacity, owaWeights)
     zs = []
@@ -69,10 +77,17 @@ def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeig
         y = tuple(fs[k].X for k in range(n))
         lorenzVec = tuple((k + 1) * rs[k].X - sum(bs[k, i].X for i in range(n)) for k in range(n))
 
+        if verbose:
+            print(f"Iteration {it}:")
+            print(f"    y              = {y}")
+            print(f"    lorenz vector  = {lorenzVec}")
         if findAllLorenzND:
-            lorenzNDPoints |= findSimilar(y, lorenzVec, values, weights, capacity, owaWeights)
+            similarNDPoints = findSimilar(y, lorenzVec, values, weights, capacity, owaWeights)
+            lorenzNDPoints |= similarNDPoints
+            print(f"    similar points = {similarNDPoints}")
         else:
             lorenzNDPoints.add(y)
+        it += 1
 
         zs.append(model.addVars(n, vtype=gp.GRB.BINARY))
         model.update()
@@ -82,7 +97,15 @@ def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeig
 
         model.optimize()
     
-    return { "pareto": set(), "lorenz": lorenzNDPoints }
+    endTime = time()
+    
+    return {
+        "pareto": set(),
+        "lorenz": lorenzNDPoints,
+        "number-of-objectives": n,
+        "number-of-items": m,
+        "runtime": endTime - startTime
+    }
 
 if __name__ == "__main__":
     from dataIO import loadKPData

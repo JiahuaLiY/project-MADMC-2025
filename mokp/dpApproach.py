@@ -4,6 +4,8 @@ from typing import Callable
 from tqdm import tqdm
 from itertools import accumulate
 
+from time import time
+
 def paretoDominate(x: tuple, y: tuple) -> bool:
     """Determine whether x Pareto-dominates y or not."""
     return x != y and all(xi >= yi for xi, yi in zip(x, y))
@@ -84,9 +86,21 @@ def modp(values: np.ndarray, weights: np.ndarray, capacity: int, dominate: Calla
 
 def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int, disable: bool=True) -> dict[str, set[tuple]]:
     """"""
+    m, n = values.shape
+
+    startTime = time()
+    
     paretoNDPoints = modp(values, weights, capacity, dominate=paretoDominate, disable=disable)
     lorenzNDPoints = ND(paretoNDPoints, dominate=lorenzDominate)
-    return { "pareto": paretoNDPoints, "lorenz": lorenzNDPoints }
+
+    endTime = time()
+    return {
+        "pareto": paretoNDPoints,
+        "lorenz": lorenzNDPoints,
+        "number-of-objectives": n,
+        "number-of-items": m,
+        "runtime": endTime - startTime
+    }
 
 if __name__ == "__main__":
     from dataIO import loadKPData
