@@ -6,6 +6,8 @@ from itertools import accumulate
 
 from time import time
 
+import mokp.cmodp.modp as cmodp
+
 def paretoDominate(x: tuple, y: tuple) -> bool:
     """Determine whether x Pareto-dominates y or not."""
     return x != y and all(xi >= yi for xi, yi in zip(x, y))
@@ -90,7 +92,8 @@ def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int, disable: 
 
     startTime = time()
     
-    paretoNDPoints = modp(values, weights, capacity, dominate=paretoDominate, disable=disable)
+    # paretoNDPoints = modp(values, weights, capacity, dominate=paretoDominate, disable=disable)
+    paretoNDPoints = set(cmodp.modp(values.tolist(), weights.tolist(), capacity, m, n))
     lorenzNDPoints = ND(paretoNDPoints, dominate=lorenzDominate)
 
     endTime = time()
