@@ -64,7 +64,7 @@ def loadData(filename) -> dict:
     with open(filename, "r") as file:
         for line in file:
             dataStrs = line.split()
-            print(dataStrs)
+            
             if dataStrs[0] == "[nb-items]":
                 data["number-of-items"] = int(dataStrs[1])
             elif dataStrs[0] == "[nb-objectives]":
@@ -72,10 +72,9 @@ def loadData(filename) -> dict:
             elif dataStrs[0] == "[runtime]":
                 data["runtime"] = float(dataStrs[1])
             elif dataStrs[0] == "[vector]":
-                isLorenzND = bool(dataStrs[-1])
-                if isLorenzND:
-                    data["lorenz"].add(tuple(float(dataStrs[i]) for i in range(1, len(dataStrs) - 2)))
-                data["pareto"].add(tuple(float(dataStrs[i]) for i in range(1, len(dataStrs) - 2)))
+                if dataStrs[-1] == "True":
+                    data["lorenz"].add(tuple(float(dataStrs[i]) for i in range(1, len(dataStrs) - 1)))
+                data["pareto"].add(tuple(float(dataStrs[i]) for i in range(1, len(dataStrs) - 1)))
     return data
 
 if __name__ == "__main__":
