@@ -1,0 +1,56 @@
+[nb-items] 70
+[nb-objectives] 3
+[nb-pareto] 50
+[nb-lorenz] 50
+[runtime] 8.170475006103516
+[format] f1 f2 f3 isLorenzND
+[vector] 28185.0 27037.0 25943.0 True
+[vector] 29055.0 26604.0 25955.0 True
+[vector] 27726.0 27860.0 25595.0 True
+[vector] 27513.0 27122.0 26197.0 True
+[vector] 28479.0 26756.0 26069.0 True
+[vector] 27666.0 27340.0 25930.0 True
+[vector] 27188.0 26807.0 26427.0 True
+[vector] 28131.0 26903.0 26031.0 True
+[vector] 27453.0 26602.0 26532.0 True
+[vector] 29026.0 26534.0 25973.0 True
+[vector] 29016.0 27137.0 25717.0 True
+[vector] 27095.0 26980.0 26302.0 True
+[vector] 28270.0 26658.0 26113.0 True
+[vector] 28231.0 27191.0 25875.0 True
+[vector] 27136.0 26894.0 26358.0 True
+[vector] 28879.0 26361.0 26216.0 True
+[vector] 26782.0 26679.0 26597.0 True
+[vector] 27148.0 27039.0 26248.0 True
+[vector] 27410.0 27348.0 26021.0 True
+[vector] 27198.0 26754.0 26478.0 True
+[vector] 28669.0 26469.0 26147.0 True
+[vector] 28181.0 27343.0 25798.0 True
+[vector] 28376.0 26323.0 26403.0 True
+[vector] 28806.0 27245.0 25648.0 True
+[vector] 27804.0 26414.0 26452.0 True
+[vector] 27819.0 26962.0 26183.0 True
+[vector] 28611.0 26819.0 25949.0 True
+[vector] 28481.0 27222.0 25702.0 True
+[vector] 28220.0 26810.0 26036.0 True
+[vector] 27507.0 26869.0 26291.0 True
+[vector] 28845.0 26712.0 25886.0 True
+[vector] 28023.0 26601.0 26346.0 True
+[vector] 27026.0 26526.0 26616.0 True
+[vector] 26969.0 26620.0 26533.0 True
+[vector] 26978.0 26915.0 26358.0 True
+[vector] 27971.0 27451.0 25729.0 True
+[vector] 27607.0 26393.0 26618.0 True
+[vector] 27776.0 27708.0 25672.0 True
+[vector] 28438.0 26316.0 26370.0 True
+[vector] 28431.0 27374.0 25625.0 True
+[vector] 28021.0 27299.0 25806.0 True
+[vector] 28170.0 26774.0 26103.0 True
+[vector] 27754.0 26566.0 26375.0 True
+[vector] 28497.0 27263.0 25682.0 True
+[vector] 27716.0 27188.0 26007.0 True
+[vector] 27717.0 26761.0 26360.0 True
+[vector] 28120.0 26926.0 26026.0 True
+[vector] 27339.0 26851.0 26351.0 True
+[vector] 28395.0 26929.0 26012.0 True
+[vector] 27973.0 26753.0 26269.0 True

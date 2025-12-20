@@ -1,0 +1,64 @@
+[nb-items] 20
+[nb-objectives] 4
+[nb-pareto] 58
+[nb-lorenz] 2
+[runtime] 0.15183472633361816
+[format] f1 f2 f3 f4 isLorenzND
+[vector] 7243 6486 7912 7280 True
+[vector] 6974 6539 6853 6845 True
+[vector] 6877 5989 5798 7910 False
+[vector] 7154 6269 7091 7303 False
+[vector] 6355 6142 7024 7931 False
+[vector] 7088 6133 6323 7552 False
+[vector] 6388 6154 7135 7555 False
+[vector] 7136 5468 7384 7788 False
+[vector] 6868 5895 6279 7913 False
+[vector] 6543 5712 8155 6835 False
+[vector] 7568 5115 6803 7603 False
+[vector] 5955 5638 7404 7815 False
+[vector] 6681 5640 6227 8179 False
+[vector] 7658 5337 6691 6854 False
+[vector] 6782 6293 6337 7702 False
+[vector] 6629 5314 8097 7046 False
+[vector] 5992 4451 8172 5879 False
+[vector] 6970 5919 6907 7805 False
+[vector] 6934 6031 7047 7664 False
+[vector] 6441 5744 6966 8142 False
+[vector] 5954 6541 7102 6831 False
+[vector] 7572 5735 6749 6643 False
+[vector] 6916 5089 6675 7927 False
+[vector] 6895 5954 6274 7749 False
+[vector] 6474 5756 7077 7766 False
+[vector] 6848 6429 7105 7453 False
+[vector] 7569 5984 7115 7528 False
+[vector] 5192 5818 7939 5957 False
+[vector] 6731 5794 7074 7818 False
+[vector] 7503 5848 6347 7777 False
+[vector] 6692 5225 7929 6324 False
+[vector] 7263 5952 7086 7740 False
+[vector] 6248 5124 6496 8439 False
+[vector] 6676 5193 7414 7890 False
+[vector] 6257 5218 6015 8436 False
+[vector] 7329 6088 7854 7491 False
+[vector] 6685 5287 6933 7887 False
+[vector] 5960 6085 6217 8104 False
+[vector] 6829 5762 6850 8155 False
+[vector] 6162 5522 6554 8228 False
+[vector] 6266 5925 6203 7954 False
+[vector] 7900 5007 6087 6505 False
+[vector] 7521 5236 7486 6759 False
+[vector] 6943 6125 6566 7661 False
+[vector] 6046 5687 6159 8315 False
+[vector] 6450 5838 6485 8139 False
+[vector] 5720 6189 6956 8067 False
+[vector] 6055 5781 5678 8312 False
+[vector] 6829 5818 5506 7998 False
+[vector] 7070 5332 6616 8037 False
+[vector] 7109 5709 7145 7630 False
+[vector] 6590 5591 7472 7679 False
+[vector] 7571 5758 7250 7142 False
+[vector] 7050 5866 7442 7577 False
+[vector] 6011 6174 6676 7597 False
+[vector] 5827 5771 8007 5821 False
+[vector] 5527 5569 6486 8364 False
+[vector] 7667 5431 6210 6851 False

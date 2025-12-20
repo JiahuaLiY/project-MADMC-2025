@@ -1,0 +1,46 @@
+[nb-items] 170
+[nb-objectives] 2
+[nb-pareto] 40
+[nb-lorenz] 40
+[runtime] 22.578012943267822
+[format] f1 f2 isLorenzND
+[vector] 64915.0 64438.0 True
+[vector] 65827.0 63961.0 True
+[vector] 66786.0 63437.0 True
+[vector] 68255.0 62392.0 True
+[vector] 68094.0 62484.0 True
+[vector] 66013.0 63883.0 True
+[vector] 70291.0 60589.0 True
+[vector] 68665.0 62007.0 True
+[vector] 64685.0 64561.0 True
+[vector] 67063.0 63251.0 True
+[vector] 68740.0 61997.0 True
+[vector] 67954.0 62586.0 True
+[vector] 70237.0 60642.0 True
+[vector] 66743.0 63450.0 True
+[vector] 66466.0 63636.0 True
+[vector] 69778.0 61089.0 True
+[vector] 66213.0 63791.0 True
+[vector] 65693.0 64082.0 True
+[vector] 68002.0 62547.0 True
+[vector] 65095.0 64337.0 True
+[vector] 65571.0 64089.0 True
+[vector] 67861.0 62669.0 True
+[vector] 70806.0 60106.0 True
+[vector] 67290.0 63146.0 True
+[vector] 69626.0 61232.0 True
+[vector] 66939.0 63309.0 True
+[vector] 65205.0 64270.0 True
+[vector] 64685.00000000017 64560.99999999994 True
+[vector] 69244.0 61578.0 True
+[vector] 64775.0 64536.0 True
+[vector] 68893.0 61869.0 True
+[vector] 65224.0 64252.0 True
+[vector] 65295.0 64245.0 True
+[vector] 65518.0 64131.0 True
+[vector] 66676.0 63465.0 True
+[vector] 68849.0 61905.0 True
+[vector] 69059.0 61730.0 True
+[vector] 65503.0 64139.0 True
+[vector] 65005.0 64362.0 True
+[vector] 67443.0 63018.0 True

@@ -1,0 +1,15 @@
+[nb-items] 40
+[nb-objectives] 3
+[nb-pareto] 9
+[nb-lorenz] 9
+[runtime] 0.2885322570800781
+[format] f1 f2 f3 isLorenzND
+[vector] 15111.0 14744.0 14176.0 True
+[vector] 14615.0 14511.0 14400.0 True
+[vector] 15549.0 15594.0 13635.0 True
+[vector] 15350.0 14825.0 14167.0 True
+[vector] 15068.0 14409.0 14421.0 True
+[vector] 15405.0 15013.0 14097.0 True
+[vector] 14909.0 14780.0 14321.0 True
+[vector] 15340.0 15428.0 13911.0 True
+[vector] 14935.0 15110.0 14143.0 True
