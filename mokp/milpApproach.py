@@ -4,7 +4,7 @@ import gurobipy as gp
 from time import time
 
 def initOWAModel(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray) -> tuple[gp.Model, tuple[gp.tupledict[int, gp.Var]]]:
-    """"""
+    """Initialize the basic OWA model for the knapsack problem with the given parameters."""
     m, n = values.shape
 
     model = gp.Model(env = gp.Env(params={"LogToConsole": 0}))
@@ -55,8 +55,35 @@ def findSimilar(y: tuple, lorenzVec: tuple, values: np.ndarray, weights: np.ndar
     
     return similarNDPoints
 
-def miplApproach(values: np.ndarray, weights: np.ndarray, capacity: int, owaWeights: np.ndarray, findAllLorenzND: bool=False, verbose: bool=False) -> dict[str, set[tuple]]:
-    """"""
+def milpApproach(values: np.ndarray,
+                 weights: np.ndarray,
+                 capacity: int,
+                 owaWeights: np.ndarray,
+                 findAllLorenzND: bool=False,
+                 verbose: bool=False) -> dict:
+    """Mixed Integer Linear Programming based method to generate Lorenz non-dominated points
+    for the knapsack problem.
+    
+    Parameters:
+        values (```np.ndarray```): 2D array representing the valuation of each item
+            in each objective function.
+
+        weights (```np.ndarray```): 1D array representing the weight of each item.
+
+        capacity (```int```): Maximum capacity.
+
+        owaWeights (```int```): List of OWA weights.
+
+        findAllLorenzND (```bool```): If true, then apply the adaptation method to find
+            all Lorenz non-dominated points; otherwise, return only the Lorenz non-dominated
+            points with distinct Lorenz vectors.
+
+        verbose (```bool```): Display detailed execution.
+
+    Returns:
+        out (```dict```): A dictionary containing all Lorenz non-dominated points generated
+            with some additional data, such as runtime.
+    """
     lorenzNDPoints = set()
     m, n = values.shape
     it = 1
@@ -124,5 +151,5 @@ if __name__ == "__main__":
 
     owaWeights = [2, 1]
 
-    results = miplApproach(values, weights, capacity, owaWeights)
+    results = milpApproach(values, weights, capacity, owaWeights)
     print(results["lorenz"])

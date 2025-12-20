@@ -86,8 +86,22 @@ def modp(values: np.ndarray, weights: np.ndarray, capacity: int, dominate: Calla
     return prevDP[-1]
 
 
-def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int, disable: bool=True) -> dict[str, set[tuple]]:
-    """"""
+def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int) -> dict:
+    """Dynamic Programming based method to generate all Lorenz non-dominated points
+    for the knapsack problem.
+    
+    Parameters:
+        values (```np.ndarray```): 2D array representing the valuation of each item
+            in each objective function.
+
+        weights (```np.ndarray```): 1D array representing the weight of each item.
+
+        capacity (```int```): Maximum capacity.
+    
+    Returns:
+        out (```dict```): A dictionary containing all Lorenz non-dominated points generated
+            with some additional data, such as runtime.
+    """
     m, n = values.shape
 
     startTime = time()
