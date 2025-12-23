@@ -1,44 +1,43 @@
 [nb-items] 180
 [nb-objectives] 2
-[nb-pareto] 38
-[nb-lorenz] 38
-[runtime] 20.732403993606567
+[nb-pareto] 37
+[nb-lorenz] 37
+[runtime] 20.932469129562378
 [format] f1 f2 isLorenzND
-[vector] 72956.0 67265.0 True
-[vector] 69926.0 69134.0 True
-[vector] 71105.0 68577.0 True
-[vector] 70539.0 68885.0 True
-[vector] 72221.0 67826.0 True
-[vector] 71968.0 67981.0 True
-[vector] 69792.0 69255.0 True
-[vector] 69829.0 69219.0 True
-[vector] 73590.0 66779.0 True
-[vector] 69863.0 69193.0 True
-[vector] 72694.0 67499.0 True
-[vector] 71865.0 68044.0 True
-[vector] 69579.00000000157 69420.9999999992 True
-[vector] 69579.0 69421.0 True
-[vector] 72317.0 67731.0 True
-[vector] 72374.0 67698.0 True
-[vector] 72121.0 67853.0 True
-[vector] 72073.0 67892.0 True
-[vector] 70462.0 68914.0 True
-[vector] 71281.0 68444.0 True
-[vector] 70008.0 69104.0 True
-[vector] 70905.0 68669.0 True
-[vector] 73437.0 66907.0 True
-[vector] 70961.0 68643.0 True
-[vector] 71928.0 67983.0 True
-[vector] 69964.0 69125.0 True
-[vector] 70585.0 68868.0 True
-[vector] 72527.0 67546.0 True
-[vector] 74046.0 66371.0 True
-[vector] 74362.0 66104.0 True
-[vector] 70052.0 69079.0 True
-[vector] 71481.0 68352.0 True
-[vector] 73086.0 67198.0 True
-[vector] 71832.0 68061.0 True
-[vector] 70332.0 69023.0 True
-[vector] 70138.0 69078.0 True
-[vector] 70041.0 69082.0 True
-[vector] 70662.0 68822.0 True
+[vector] 72956 67265 True
+[vector] 69926 69134 True
+[vector] 71105 68577 True
+[vector] 70539 68885 True
+[vector] 72221 67826 True
+[vector] 71968 67981 True
+[vector] 69792 69255 True
+[vector] 69829 69219 True
+[vector] 73590 66779 True
+[vector] 69863 69193 True
+[vector] 72694 67499 True
+[vector] 71865 68044 True
+[vector] 69579 69421 True
+[vector] 72317 67731 True
+[vector] 72374 67698 True
+[vector] 72121 67853 True
+[vector] 72073 67892 True
+[vector] 70462 68914 True
+[vector] 71281 68444 True
+[vector] 70008 69104 True
+[vector] 70905 68669 True
+[vector] 73437 66907 True
+[vector] 70961 68643 True
+[vector] 71928 67983 True
+[vector] 69964 69125 True
+[vector] 70585 68868 True
+[vector] 72527 67546 True
+[vector] 74046 66371 True
+[vector] 74362 66104 True
+[vector] 70052 69079 True
+[vector] 71481 68352 True
+[vector] 73086 67198 True
+[vector] 71832 68061 True
+[vector] 70332 69023 True
+[vector] 70138 69078 True
+[vector] 70041 69082 True
+[vector] 70662 68822 True

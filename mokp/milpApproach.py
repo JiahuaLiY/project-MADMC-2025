@@ -101,8 +101,8 @@ def milpApproach(values: np.ndarray,
     model.optimize()
 
     while model.status == gp.GRB.OPTIMAL:
-        y = tuple(fs[k].X for k in range(n))
-        lorenzVec = tuple((k + 1) * rs[k].X - sum(bs[k, i].X for i in range(n)) for k in range(n))
+        y = tuple(round(fs[k].X) for k in range(n))
+        lorenzVec = tuple(round((k + 1) * rs[k].X - sum(bs[k, i].X for i in range(n))) for k in range(n))
 
         if verbose:
             print(f"Iteration {it}:")

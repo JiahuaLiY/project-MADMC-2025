@@ -2,26 +2,26 @@
 [nb-objectives] 2
 [nb-pareto] 21
 [nb-lorenz] 21
-[runtime] 4.282711982727051
+[runtime] 3.8468170166015625
 [format] f1 f2 isLorenzND
-[vector] 55268.0 53553.0 True
-[vector] 56143.0 52862.0 True
-[vector] 54559.0 54017.0 True
-[vector] 55106.0 53652.0 True
-[vector] 54239.0 54256.0 True
-[vector] 56103.0 52880.0 True
-[vector] 56951.0 52211.0 True
-[vector] 54290.0 54212.0 True
-[vector] 55824.0 53129.0 True
-[vector] 55990.0 52990.0 True
-[vector] 55452.0 53403.0 True
-[vector] 56160.0 52855.0 True
-[vector] 54406.0 54145.0 True
-[vector] 56239.0 52800.0 True
-[vector] 54953.0 53780.0 True
-[vector] 55751.0 53198.0 True
-[vector] 54633.0 53979.0 True
-[vector] 56463.0 52663.0 True
-[vector] 57065.0 52164.0 True
-[vector] 55599.0 53299.0 True
-[vector] 55908.0 53054.0 True
+[vector] 55268 53553 True
+[vector] 56143 52862 True
+[vector] 54559 54017 True
+[vector] 55106 53652 True
+[vector] 54239 54256 True
+[vector] 56103 52880 True
+[vector] 56951 52211 True
+[vector] 54290 54212 True
+[vector] 55824 53129 True
+[vector] 55990 52990 True
+[vector] 55452 53403 True
+[vector] 56160 52855 True
+[vector] 54406 54145 True
+[vector] 56239 52800 True
+[vector] 54953 53780 True
+[vector] 55751 53198 True
+[vector] 54633 53979 True
+[vector] 56463 52663 True
+[vector] 57065 52164 True
+[vector] 55599 53299 True
+[vector] 55908 53054 True

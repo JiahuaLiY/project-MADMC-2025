@@ -2,7 +2,7 @@
 [nb-objectives] 2
 [nb-pareto] 2
 [nb-lorenz] 2
-[runtime] 0.012751102447509766
+[runtime] 0.013875007629394531
 [format] f1 f2 isLorenzND
-[vector] 6974.0 6539.0 True
-[vector] 7243.0 6486.0 True
+[vector] 6974 6539 True
+[vector] 7243 6486 True
