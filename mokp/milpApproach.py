@@ -55,6 +55,14 @@ def findSimilar(y: tuple, lorenzVec: tuple, values: np.ndarray, weights: np.ndar
     
     return similarNDPoints
 
+def _checkOWAWeights(owaWeights: np.ndarray) -> None:
+    n = owaWeights.shape[0]
+    for i in range(n - 1):
+        if owaWeights[i] <= owaWeights[i + 1]:
+            raise ValueError(f"{owaWeights=} must be a strictly decreasing vector")
+    if owaWeights[n - 1] <= 0:
+        raise ValueError(f"{owaWeights=} must be strictly positive")
+
 def milpApproach(values: np.ndarray,
                  weights: np.ndarray,
                  capacity: int,
@@ -84,6 +92,14 @@ def milpApproach(values: np.ndarray,
         out (```dict```): A dictionary containing all Lorenz non-dominated points generated
             with some additional data, such as runtime.
     """
+    if not isinstance(values, np.ndarray):
+        values = np.array(values)
+    if not isinstance(weights, np.ndarray):
+        weights = np.array(weights)
+    if not isinstance(owaWeights, np.ndarray):
+        owaWeights = np.array(owaWeights)
+    _checkOWAWeights(owaWeights)
+    
     lorenzNDPoints = set()
     m, n = values.shape
     it = 1

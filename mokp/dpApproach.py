@@ -102,6 +102,11 @@ def dpApproach(values: np.ndarray, weights: np.ndarray, capacity: int) -> dict:
         out (```dict```): A dictionary containing all Lorenz non-dominated points generated
             with some additional data, such as runtime.
     """
+    if not isinstance(values, np.ndarray):
+        values = np.array(values)
+    if not isinstance(weights, np.ndarray):
+        weights = np.array(weights)
+    
     m, n = values.shape
 
     startTime = time()
