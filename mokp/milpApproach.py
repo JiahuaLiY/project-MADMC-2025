@@ -42,7 +42,7 @@ def findSimilar(y: tuple, lorenzVec: tuple, values: np.ndarray, weights: np.ndar
 
     model.optimize()
     while model.status == gp.GRB.OPTIMAL:
-        y = tuple(fs[k].X for k in range(n))
+        y = tuple(round(fs[k].X) for k in range(n))
         similarNDPoints.add(y)
 
         zs.append(model.addVars(n, vtype=gp.GRB.BINARY))
