@@ -1,0 +1,26 @@
+[nb-items] 100
+[nb-objectives] 2
+[nb-pareto] 20
+[nb-lorenz] 20
+[runtime] 1.9029197692871094
+[format] f1 f2 isLorenzND
+[vector] 40180 39648 True
+[vector] 40417 39484 True
+[vector] 40520 39421 True
+[vector] 41477 38793 True
+[vector] 40273 39592 True
+[vector] 40678 39302 True
+[vector] 42273 38095 True
+[vector] 41184 39031 True
+[vector] 40334 39559 True
+[vector] 41324 38931 True
+[vector] 41761 38515 True
+[vector] 40879 39212 True
+[vector] 40660 39305 True
+[vector] 41933 38385 True
+[vector] 40231 39622 True
+[vector] 40549 39413 True
+[vector] 40776 39275 True
+[vector] 42069 38285 True
+[vector] 39901 39886 True
+[vector] 41055 39037 True

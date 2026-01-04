@@ -1,0 +1,10 @@
+[nb-items] 70
+[nb-objectives] 2
+[nb-pareto] 4
+[nb-lorenz] 4
+[runtime] 0.04762077331542969
+[format] f1 f2 isLorenzND
+[vector] 28215 28213 True
+[vector] 28047 28483 True
+[vector] 28044 28546 True
+[vector] 28334 28112 True

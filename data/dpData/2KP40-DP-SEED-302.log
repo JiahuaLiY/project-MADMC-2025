@@ -1,0 +1,50 @@
+[nb-items] 40
+[nb-objectives] 2
+[nb-pareto] 44
+[nb-lorenz] 14
+[runtime] 0.7653729915618896
+[format] f1 f2 isLorenzND
+[vector] 16800 11432 True
+[vector] 17073 11301 True
+[vector] 14220 13033 True
+[vector] 13401 13117 True
+[vector] 16408 11811 True
+[vector] 15422 12380 True
+[vector] 13547 13106 True
+[vector] 13179 13268 True
+[vector] 14979 12656 True
+[vector] 14442 12882 True
+[vector] 15958 12065 True
+[vector] 14684 12669 True
+[vector] 16135 11942 True
+[vector] 15692 12218 True
+[vector] 13251 13168 False
+[vector] 13550 13043 False
+[vector] 17370 9990 False
+[vector] 12762 13345 False
+[vector] 15155 12444 False
+[vector] 17355 10148 False
+[vector] 17393 9958 False
+[vector] 11793 13480 False
+[vector] 13299 13119 False
+[vector] 13011 13286 False
+[vector] 11182 13634 False
+[vector] 12727 13347 False
+[vector] 15052 12507 False
+[vector] 11686 13582 False
+[vector] 17421 9870 False
+[vector] 16536 11527 False
+[vector] 15695 12155 False
+[vector] 15158 12381 False
+[vector] 16138 11879 False
+[vector] 17207 10553 False
+[vector] 17210 10250 False
+[vector] 16411 11748 False
+[vector] 17093 10702 False
+[vector] 12274 13437 False
+[vector] 15979 11989 False
+[vector] 17543 9800 False
+[vector] 11350 13616 False
+[vector] 10397 13674 False
+[vector] 12877 13296 False
+[vector] 14516 12687 False
