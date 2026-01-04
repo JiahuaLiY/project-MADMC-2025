@@ -1,5 +1,5 @@
 # project-MADMC-2025
-Dans ce projet, nous avons implémenté deux approches pour générer l'ensemble des solutions non dominées au sens de Lorenz pour le problème du sac à dos multi-objectifs.  
+Dans ce projet, nous avons implémenté deux approches pour générer l'ensemble des points non dominés au sens de Lorenz pour le problème du sac à dos multi-objectifs.  
 L'instance utilisée pour nos jeux de tests est ["2KP200-TA-0.dat"](./data/2KP200-TA-0.dat), qui contient les données d'une instance du problème du sac à dos avec 200 objets et 6 critères. Nous avons utilisé des sous-ensembles de données de cette instance pour réaliser nos tests et nos comparaisons.
 
 ## Prérequis
@@ -15,7 +15,7 @@ pip install numpy pandas gurobipy
 
 ## Approche en deux phases
 ### Description
-Dans cette première approche, la génération de solutions non dominées au sens de Lorenz se divise en deux phases. Tout d'abord, elle génère toutes les solutions non dominées au sens de Pareto pour le problème du sac à dos multi-objectifs à l'aide de la programmation dynamique multi-objectif, c'est pourquoi nous appelons cette approche: ```dpApproach``` dans la suite du projet. Ensuite, elle filtre les solutions obtenues dans la première phase, en ne conservant que celles qui sont non dominées au sens de Lorenz.
+Dans cette première approche, la génération de points non dominés au sens de Lorenz se divise en deux phases. Tout d'abord, elle génère tous les points non dominés au sens de Pareto pour le problème du sac à dos multi-objectifs à l'aide de la programmation dynamique multi-objectif, c'est pourquoi nous appelons cette approche: ```dpApproach``` dans la suite du projet. Ensuite, elle filtre les points obtenus dans la première phase, en ne conservant que ceux qui sont non dominés au sens de Lorenz.
 
 ### Usage
 ```python
@@ -40,11 +40,11 @@ print(data)
 #     'runtime': 4.601478576660156e-05
 # }
 ```
-**Remarque**: bien que la majorité du code soit implémenté en Python, la première phase de la fonction ```dpApproach``` est implémenté en C et interagit avec le code à travers un **wrapper** généré par SWIG. Par conséquent, avant d'utiliser la fonction ```dpApproach```, veuillez d'abord exécuter le fichier ```compile.sh``` pour générer ce wrapper.
+**Attention**: bien que la majorité du code soit implémenté en Python, la première phase de la fonction ```dpApproach``` est implémenté en C et interagit avec le code à travers un **wrapper** généré par SWIG. Par conséquent, avant d'utiliser la fonction ```dpApproach```, veuillez d'abord exécuter le fichier ```compile.sh``` pour générer ce wrapper.
 
 ## Approche MILP
 ### Description
-Dans cette deuxième approche, la génération est réalisée par une procédure itérative en résolvant des programmes linéaires en variables mixtes, c'est pourquoi nous appelons également cette approche: ```milpApproach``` dans la suite du projet. Cette approche est principalement basée sur la formulation du modèle OWA (Ordered Weighted Averaging). Pour plus de détails, nous vous invitons à consulter les papiers [[1]](./docs/LorenzDominance.pdf) et [[2]](./docs/SylvaCrema.pdf).
+Dans cette deuxième approche, la génération est réalisée par une procédure itérative en résolvant des programmes linéaires en variables mixtes, c'est pourquoi nous appelons également cette approche: ```milpApproach``` dans la suite du projet. Cette approche est principalement fondée sur la formulation linéaire du modèle OWA (Ordered Weighted Averaging). Pour plus de détails, nous vous invitons à consulter les papiers [[1]](./docs/LorenzDominance.pdf) et [[2]](./docs/SylvaCrema.pdf).
 
 ### Usage
 ```python
@@ -64,13 +64,13 @@ print(data)
 #     'runtime': 0.008540868759155273
 # }
 # We note that the simplied version of the milpApproach does
-# not generate all Lorenz non-dominated solutions, since it
+# not generate all Lorenz non-dominated points, since it
 # does not distinguish between two vectors whose Lorenz vector
 # is identical (e.g., (12, 10, 13) and (12, 13, 10) ), as is
 # the case above.
 
 # We have implemented the improved version that generates
-# all solutions. Simply set the flag: findAllLorenzND to true
+# all points. Simply set the flag: findAllLorenzND to true
 # to use it.
 data = milpApproach(values, weights, capacity, owaWeights, findAllLorenzND=True)
 print(data)
