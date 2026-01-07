@@ -1,0 +1,54 @@
+[nb-items] 70
+[nb-objectives] 2
+[nb-pareto] 48
+[nb-lorenz] 18
+[runtime] 2.2486958503723145
+[format] f1 f2 isLorenzND
+[vector] 30526 27918 True
+[vector] 30738 27744 True
+[vector] 29077 28475 True
+[vector] 29988 28172 True
+[vector] 29822 28227 True
+[vector] 31368 27364 True
+[vector] 30807 27688 True
+[vector] 28702 28609 True
+[vector] 30418 27945 True
+[vector] 29336 28473 True
+[vector] 30997 27631 True
+[vector] 30178 28115 True
+[vector] 29878 28177 True
+[vector] 29476 28431 True
+[vector] 31514 27257 True
+[vector] 29695 28253 True
+[vector] 29796 28230 True
+[vector] 28672 28614 True
+[vector] 27828 28757 False
+[vector] 27693 28944 False
+[vector] 31535 27081 False
+[vector] 32221 25993 False
+[vector] 30007 28119 False
+[vector] 31954 26607 False
+[vector] 31961 26475 False
+[vector] 32510 24503 False
+[vector] 31927 26702 False
+[vector] 28258 28719 False
+[vector] 30615 27746 False
+[vector] 31019 27445 False
+[vector] 27744 28809 False
+[vector] 32385 25884 False
+[vector] 32250 25891 False
+[vector] 32171 26461 False
+[vector] 28448 28662 False
+[vector] 32475 25789 False
+[vector] 32486 24993 False
+[vector] 29542 28283 False
+[vector] 31633 27011 False
+[vector] 30295 27947 False
+[vector] 32478 25076 False
+[vector] 31883 26743 False
+[vector] 31028 27431 False
+[vector] 30547 27887 False
+[vector] 28373 28670 False
+[vector] 31756 26769 False
+[vector] 31178 27421 False
+[vector] 31677 26970 False
