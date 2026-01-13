@@ -1,6 +1,6 @@
 # project-MADMC-2025
 Dans ce projet, nous avons implémenté deux approches pour générer l'ensemble des points non dominés au sens de Lorenz pour le problème du sac à dos multi-objectifs.  
-L'instance utilisée pour nos jeux de tests est ["2KP200-TA-0.dat"](./data/2KP200-TA-0.dat), qui contient les données d'une instance du problème du sac à dos avec 200 objets et 6 critères. Nous avons utilisé des sous-ensembles de données de cette instance pour réaliser nos tests et nos comparaisons.
+La source principale utilisée pour réaliser nos comparaisons est **["2KP200-TA-0.dat"](./data/2KP200-TA-0.dat)**, qui contient les données d'une instance du problème du sac à dos multi-objectifs à 200 objets et 6 critères. Nous n'avons utilisé que des sous-ensembles de données de cette instance pour réaliser nos comparaisons.
 
 ## Prérequis
 * **[numpy](https://numpy.org)**
@@ -15,7 +15,7 @@ pip install numpy pandas gurobipy
 
 ## Approche en deux phases
 ### Description
-Dans cette première approche, la génération de points non dominés au sens de Lorenz se divise en deux phases. Tout d'abord, elle génère tous les points non dominés au sens de Pareto pour le problème du sac à dos multi-objectifs à l'aide de la programmation dynamique multi-objectif, c'est pourquoi nous appelons cette approche: ```dpApproach``` dans la suite du projet. Ensuite, elle filtre les points obtenus dans la première phase, en ne conservant que ceux qui sont non dominés au sens de Lorenz.
+Dans cette première approche, la génération de points non dominés au sens de Lorenz se divise en deux phases. Tout d'abord, elle génère tous les points non dominés au sens de Pareto pour le problème du sac à dos multi-objectifs en utilisant la programmation dynamique multi-objectif, c'est pourquoi nous appelons cette approche: ```dpApproach``` dans la suite du projet. Ensuite, elle filtre les points obtenus dans la première phase, en ne conservant que ceux qui sont non dominés au sens de Lorenz.
 
 ### Usage
 ```python
@@ -40,7 +40,7 @@ print(data)
 #     'runtime': 4.601478576660156e-05
 # }
 ```
-**Attention**: bien que la majorité du code soit implémenté en Python, la première phase de la fonction ```dpApproach``` est implémenté en C et interagit avec le code à travers un **wrapper** généré par SWIG. Par conséquent, avant d'utiliser la fonction ```dpApproach```, veuillez d'abord exécuter le fichier ```compile.sh``` pour générer ce wrapper.
+**Attention**: bien que la plupart du code soit implémenté en Python, la première phase de la fonction ```dpApproach``` est implémenté en C et interagit avec le code via un **wrapper** généré par SWIG. Par conséquent, avant d'utiliser la fonction ```dpApproach```, veuillez d'abord exécuter le fichier ```compile.sh``` pour générer ce wrapper.
 
 ## Approche MILP
 ### Description
@@ -97,7 +97,7 @@ df, capacity = loadKPData("./data/2KP200-TA-0.dat")
 # Take n first objectives.
 indices = list(df.columns)[1 : n + 1] # ["v1", "v2", ..., "vn"]
 
-# Take m itms.
+# Take m items.
 dfPrime = df.head(m) # m first items.
 # dfPrime = df.tail(m) # m last items.
 # dfPrime = df.sample(m) # m random items.
