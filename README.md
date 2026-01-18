@@ -44,7 +44,7 @@ print(data)
 
 ## Approche MILP
 ### Description
-Dans cette deuxième approche, la génération est réalisée par une procédure itérative en résolvant des programmes linéaires en variables mixtes, c'est pourquoi nous appelons également cette approche: ```milpApproach``` dans la suite du projet. Cette approche est principalement fondée sur la formulation linéaire du modèle OWA (Ordered Weighted Averaging). Pour plus de détails, nous vous invitons à consulter les papiers [[1]](./docs/LorenzDominance.pdf) et [[2]](./docs/SylvaCrema.pdf).
+Dans cette deuxième approche, la génération est réalisée par une procédure itérative en résolvant des programmes linéaires à variables mixtes, c'est pourquoi nous appelons également cette approche: ```milpApproach``` dans la suite du projet. Cette approche est principalement fondée sur la formulation linéaire du modèle OWA (Ordered Weighted Averaging). Pour plus de détails, nous vous invitons à consulter les papiers [[1]](./docs/LorenzDominance.pdf) et [[2]](./docs/SylvaCrema.pdf).
 
 ### Usage
 ```python
